@@ -1,11 +1,59 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Site</title>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lists.css">
+    <link rel="stylesheet" href="css/todos.css">
+    <link rel="stylesheet" href="css/popups.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/renders.js" defer></script>
+    <script src="js/list.js" defer></script>
+    <script src="js/todos.js" defer></script>
+    <script src="js/creates.js" defer></script>
+    <script src="js/popups.js" defer></script>
 </head>
 <body>
-    <p>Hello World!</p>
+    <header id="top">
+        <button id="show-lists" title="Exibir listas">
+            <i class="fa fa-list"></i>
+        </button>
+        <h1>To Do List</h1>
+        <button class="create-new-list" title="Adicionar lista">
+            <i class="fa fa-plus"></i>
+        </button>
+    </header>
+    <section>
+        <article id="lists-space">
+            <header class="create-new-list">
+                <h3 id="title">To Do Lists</h3>     
+                <button title="Adicionar lista">
+                    <i class="fa fa-plus"></i>
+                </button>           
+            </header>
+                      
+            <ul id="todo-lists">
+            </ul>
+        </article>
+        <article id="todos-space">
+            <header>
+                <h2 id="list-name"></h2>
+            </header>
+            <ul id="todos-list">
+            </ul>
+            <footer>
+                <input type="text" id="new-todo-text" placeholder="Novo todo">
+                <button id="add-new-todo">Adicionar</button>
+            </footer>
+        </article>
+    </section>
+
+    <section id="pop-up">
+        <div>
+            <div id="btns"></div>
+        </div>        
+    </section>
 </body>
 </html>

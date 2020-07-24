@@ -1,0 +1,35 @@
+#todos-space {
+    width: 100vw;
+}
+#todos-space > * {
+    padding: 17px 20px;
+    width: 100%;
+}
+
+#todos-space > header {
+    background-color: rgba(0, 120, 150, .2);
+    display: none;
+}
+
+#todos-space > #todos-list {
+    flex-grow: 2;
+}
+#todos-space > #todos-list > .todo {
+    border-radius: 10px;
+}
+
+#todos-space > footer {
+    border-top: 2px inset rgba(0, 120, 150, .9);
+    display: none;
+}
+#todos-space > footer > input {
+    margin-right: 15px;
+    width: 100%;
+}
+#todos-space > footer > button {
+    background-color: rgba(0, 120, 150, .6);
+    padding: 10px 45px;
+}
+#todos-space > footer > button:hover {
+    background-color: rgba(0, 120, 150, .9);
+}
