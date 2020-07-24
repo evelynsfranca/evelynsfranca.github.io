@@ -2,8 +2,10 @@ function renderLists() {
     
     if(!todos.length) {
         listsElement.innerHTML = 'Você ainda não possuí nenhuma lista.'
+        listsElement.style.padding = '20px'
     } else {
         listsElement.innerHTML = ''
+        listsElement.removeAttribute('style')
         createListsRender()
     }
     
@@ -22,7 +24,13 @@ function renderToDos(list) {
         return
     } else {
 
-        !list.todo.length && !list.done.length ? todosListElement.innerHTML = 'Você ainda não possui nenhum to do.' : todosListElement.innerText = ''
+        if(!list.todo.length && !list.done.length) {
+            todosListElement.innerHTML = 'Essa lista ainda não possui nenhum to do.'
+            todosListElement.style.padding = '20px'
+        } else {
+            todosListElement.innerText = ''
+            todosListElement.removeAttribute('style')
+        } 
 
         var listElement = document.querySelectorAll('.list')
             listElement.forEach(listElem => {
