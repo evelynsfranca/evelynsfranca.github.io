@@ -3,9 +3,12 @@ function renderLists() {
     if(!todos.length) {
         listsElement.innerHTML = 'Você ainda não possuí nenhuma lista.'
         listsElement.style.padding = '20px'
+        todosListElement.innerHTML = ''
+        todosSpace.removeAttribute('style')
     } else {
         listsElement.innerHTML = ''
         listsElement.removeAttribute('style')
+        elementVisibility(todosSpace)
         createListsRender()
     }
     

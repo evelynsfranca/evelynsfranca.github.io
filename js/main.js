@@ -10,6 +10,8 @@ var popupContentButtons = document.querySelector('#pop-up #btns')
 
 let listsSpace = document.querySelector('#lists-space')
 let todosSpace = document.querySelector('#todos-space')
+let listNameElementHeader = document.querySelector('#todos-space > header')
+let addTodoSpace = document.querySelector('#todos-space > footer')   
 
 let listsElement = document.querySelector('#todo-lists') /* Lists */
 let todosListElement = document.querySelector('#todos-list') 
