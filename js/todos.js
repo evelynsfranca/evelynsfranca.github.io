@@ -1,10 +1,9 @@
 function addTodo() {
-
-    let listName = document.querySelector('#list-name').innerText
+    
     let newTodoTextElement = document.querySelector('#new-todo-text')
     let newTodoText = newTodoTextElement.value
 
-    let position = todos.findIndex(elem => elem.name === listName)
+    let position = todos.findIndex(elem => elem.name === currentList)
 
     if(!newTodoText) {
         newTodoTextElement.focus()
@@ -20,10 +19,9 @@ function addTodo() {
 
 function checkToDo(element) {
 
-    let listName = document.querySelector('#list-name').innerText
     let todoName = element.parentNode.childNodes[2].value
 
-    let listPosition = todos.findIndex(elem => elem.name === listName)
+    let listPosition = todos.findIndex(elem => elem.name === currentList)
     let todoPosition = todos[listPosition].todo.findIndex(todo => todo === todoName)
     let donePosition = todos[listPosition].done.findIndex(done => done === todoName)
 
@@ -41,10 +39,9 @@ function checkToDo(element) {
 
 function editToDo(oldTodoName) {
     
-    let listName = document.querySelector('#list-name').innerText
     let newTodoName = document.querySelector('#new-todo-name').value
 
-    let listPosition = todos.findIndex(elem => elem.name === listName)
+    let listPosition = todos.findIndex(elem => elem.name === currentList)
     let todoPosition = todos[listPosition].todo.findIndex(todo => todo === oldTodoName)
     let donePosition = todos[listPosition].done.findIndex(done => done === oldTodoName)
 
@@ -60,9 +57,7 @@ function editToDo(oldTodoName) {
 
 function removeToDo(toDoName) {
 
-    let listName = document.querySelector('#list-name').innerText
-
-    let listPosition = todos.findIndex(elem => elem.name === listName)
+    let listPosition = todos.findIndex(elem => elem.name === currentList)
     let todoPosition = todos[listPosition].todo.findIndex(todo => todo === toDoName)
     let donePosition = todos[listPosition].done.findIndex(done => done === toDoName)
 

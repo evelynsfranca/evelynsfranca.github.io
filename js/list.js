@@ -40,6 +40,7 @@ function showToDosList(element) {
     let listName = element.parentNode.childNodes[0].value
     let position = todos.findIndex(elem => elem.name === listName)
 
+    document.body.offsetWidth < 800 && listsSpace.removeAttribute("style") && closeLists();
     renderToDos(todos[position])
 }
 

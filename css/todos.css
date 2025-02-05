@@ -1,5 +1,4 @@
 #todos-space {
-    display: none;
     width: 100vw;
 }
 #todos-space > * {
@@ -9,6 +8,7 @@
 
 #todos-space > header {
     background-color: rgba(0, 120, 150, .2);
+    display: none;
 }
 
 #todos-space > #todos-list {
@@ -20,6 +20,7 @@
 
 #todos-space > footer {
     border-top: 2px inset rgba(0, 120, 150, .9);
+    display: none;
 }
 #todos-space > footer > input {
     margin-right: 15px;

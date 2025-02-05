@@ -1,48 +1,74 @@
 #pop-up {
-    background-color: rgba(0, 0, 0, .5);
     display: none;
     flex-direction: column;
-    height: 100%;
     align-items: center;
     justify-content: center;
-    position: absolute; top: 0; left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
     width: 100%;
 }
+
 #pop-up > div {
-    background-color: #333;
-    border-radius: 10px;
     display: none;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 130px;
+
+    background-color: #333;
+    border-radius: 10px;
     padding: 20px;
+    
+    min-height: 130px;
     min-width: 340px;
     width: auto;
 }
+
 #pop-up > div > * {
-    height: 30px;
+    padding: 1rem 0;
+
+    height: fit-content;
 }
+
 #pop-up > div > p {
+    font-size: 1rem;
     text-align: center;
 }
+
 #pop-up > div > input,
 #pop-up > div > #btns {
     width: 100%;
 }
+
 #pop-up > div > #btns {
     display: inline-flex;
     justify-content: center;
 }
+
 #pop-up > div > #btns > button {
     color: white;
     margin: 0 5px;
+    
     width: 50%;
 }
+
 #pop-up > div > #btns > #agree {
     background-color: #006e8e;
     padding: 5px 15px;
 }
+
 #pop-up > div > #btns > .btn-cancel {
     background: none;
     border: 1px solid #888;
+}
+
+@media screen and (max-width: 800px) {
+    #pop-up > div > p {
+        font-size: 1rem;
+    }
 }
